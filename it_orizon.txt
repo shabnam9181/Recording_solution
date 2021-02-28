@@ -1,0 +1,7 @@
+create database cardetails1
+use cardetails1
+create table car(Company varchar(15) not null,Model varchar(15) not null,Color varchar(10) not null,Date_of_purchase date,Price int, Engine_capacity varchar(10) not null,Licence_plate_number varchar(10) not null,Seating_capacity int)
+select * from car
+create table login(username varchar(15),password varchar(15))
+insert into login values("bean@car.com","carcol1")
+select * from login
