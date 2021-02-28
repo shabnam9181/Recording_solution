@@ -35,7 +35,6 @@ public class Delete extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String Model = request.getParameter("Model");
-		System.out.println(Model);
 		DB_con db=new DB_con();
 		Connection con = db.establishcon();
 		Deletecar d=new Deletecar();

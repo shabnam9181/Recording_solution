@@ -55,10 +55,6 @@ public class Details extends HttpServlet {
 		String Date_of_purchase = request.getParameter("Date_of_purchase");
 		int Price = Integer.parseInt(request.getParameter("Price"));
 		String Color = request.getParameter("Color");
-		System.out.println(Model);
-		System.out.println(Date_of_purchase);
-		System.out.println(Price);
-		System.out.println(Color);
 		DB_con db=new DB_con();
 		Connection con = db.establishcon();
 		Search s=new Search();

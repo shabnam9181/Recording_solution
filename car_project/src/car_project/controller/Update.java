@@ -47,9 +47,6 @@ public class Update extends HttpServlet {
 		String Color = request.getParameter("Color");
 		String Date_of_purchase = request.getParameter("Date_of_purchase");
 		String Licence_plate_number = request.getParameter("Licence_plate_number");
-		System.out.println(Color);
-		System.out.println(Date_of_purchase);
-		System.out.println(Licence_plate_number);
 		DB_con db=new DB_con();
 		Connection con = db.establishcon();
 		Updatecar up=new Updatecar();

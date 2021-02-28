@@ -60,7 +60,6 @@ public class Addcar extends HttpServlet {
 		Connection con = db.establishcon();
 		Add_car_details add=new Add_car_details();
 		int i=add.add_detail(Company, Model, Color, Date_of_purchase, Price, Engine_capacity, Licence_plate_number, Seating_capacity, con);
-	    System.out.println("controller after logic calling");
 	    if(i==1) {
 	    	request.setAttribute("msg", "Record saved");
 	    	RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/addcar.jsp");

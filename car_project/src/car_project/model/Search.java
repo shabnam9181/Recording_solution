@@ -8,7 +8,6 @@ public class Search {
 
 	public ResultSet search_res(String Model, String Date_of_purchase, String Color, int Price, Connection con) {
 		try {
-			System.out.println("search method");
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Statement stmt = con.createStatement();
 			ResultSet set = stmt.executeQuery("select * from car where  Date_of_purchase ='" + Date_of_purchase

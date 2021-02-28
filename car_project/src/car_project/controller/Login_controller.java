@@ -45,23 +45,18 @@ public class Login_controller extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("post method");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		System.out.println(username);
-		System.out.println(password);
 		DB_con db = new DB_con();
 		Connection con = db.establishcon();
 		Login_verification log = new Login_verification();
 		boolean result = log.login(username, password, con);
 		HttpSession session = request.getSession(true);
 		if (result == true) {
-			System.out.println("if condition");
 			session.setAttribute("username", session);
 			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/details.jsp");
 			rd.forward(request, response);
 		} else {
-			System.out.println("else condition");
 			request.setAttribute("error", "invalid credential");
 			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 			rd.include(request, response);

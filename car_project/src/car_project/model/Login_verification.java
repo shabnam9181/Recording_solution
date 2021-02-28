@@ -12,7 +12,6 @@ public class Login_verification {
 			stmnt = con.createStatement();
 			result = stmnt.executeQuery(
 					"select * from login where username='" + username + "' and password='" + password + "'");
-			System.out.println("login verification");
 			return result.next();
 		} catch (Exception e) {
 			e.printStackTrace();
